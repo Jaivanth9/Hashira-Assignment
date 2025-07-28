@@ -41,7 +41,6 @@ function parseInput(filePath) {
         const base = parseInt(data[key].base);
         const valueStr = data[key].value;
 
-        // Parse y using BigInt in the given base
         const y = BigInt(parseInt(valueStr, base));
         shares.push([x, y]);
     }
@@ -97,7 +96,6 @@ function solveSecret(filePath) {
     return finalSecret;
 }
 
-// Run for both test cases
 const secret1 = solveSecret('test1.json');
 const secret2 = solveSecret('test2.json');
 
